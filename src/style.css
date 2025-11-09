@@ -9,7 +9,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 .hash-span {
@@ -54,12 +54,29 @@
 }
 
 .bg {
-  background-image: url("https://cdn.discordapp.com/attachments/545739745922383901/1269436419945009162/peakpx.jpg?ex=66b00e4b&is=66aebccb&hm=b6efa372642b70bc30daafad9fc0a5bcafb91946d3d9afc6332a165967c39f8a&");
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 1500px;
+    background-image: url("https://falicyfallenicy.github.io/assets/background9-2c2961e5.jpg");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 1500px;
+    position: relative;
+    overflow: hidden;
 }
+
+.bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.1); /* optional dark overlay */
+    z-index: 0;
+}
+
+.bg > * {
+    position: relative;
+    z-index: 1; /* keep content above blur */
+}
+
 
 .border-top-left-rad {
   border-top-left-radius: 30px;
